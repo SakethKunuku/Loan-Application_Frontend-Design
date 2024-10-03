@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage - Loansphere</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #EAC7AF;
+        }
+        /* Navbar Styling */
+        nav {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 10px 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            height: 70px;
+            width: 100%; /* Fill the full width */
+            position: fixed; /* Fix to the top */
+            top: 0; /* Align to the top */
+            left: 0; /* Align to the left */
+            z-index: 1000; /* Ensure it's on top of other elements */
+        }
+
+        nav .logo {
+            font-size: 24px;
+            color: white;
+            font-weight: bold;
+            margin-right: 15px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 10px;
+            display: flex;
+            flex-direction: row;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+            position: relative;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #EAC7AF;
+        }
+
+        /* Dropdown Styling */
+        .dropdown {
+            display: none;
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.8);
+            min-width: 160px;
+            z-index: 1;
+        }
+
+        .dropdown a {
+            padding: 10px 15px;
+            display: block;
+        }
+
+        nav ul li:hover .dropdown {
+            display: block;
+        }
+
+        .main-content {
+            width: 80%;
+            padding: 20px;
+            margin: 90px auto 20px; /* Add margin-top to push down the content below the navbar */
+            background-color: #8A6565;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1, h2 {
+            color: white;
+        }
+
+        section {
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .main-content {
+                width: 95%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">Loansphere</div>
+        <ul>
+            <li><a href="homepage.html">Home</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li>
+                <a href="#">Login</a>
+                <div class="dropdown">
+                    <a href="Admin/index.html">Admin Login</a>
+                    <a href="lender/lender-dashboard.html">Lender Login</a>
+                    <a href="Borrower/borrower-dashboard.html">Borrower Login</a>
+                </div>
+            </li>
+            <li><a href="register.html">Register</a></li>
+        </ul>
+    </nav>
+
+    <div class="main-content">
+        <h1>Welcome to Loansphere</h1>
+        <section>
+            <h2 style="color: black;">About Us</h2>
+            <p>Loansphere is dedicated to providing an easy and secure way to manage your loan applications. We connect borrowers and lenders seamlessly.</p>
+        </section>
+
+        <section>
+            <h2 style="color: black;">Our Services</h2>
+            <p>We offer a variety of services to help you with your loan needs, including personalized loan advice, flexible payment plans, and ongoing support throughout your loan journey.</p>
+        </section>
+
+        <section>
+            <h2 style="color: black;">Why Choose Us?</h2>
+            <p>Loansphere provides transparent information and guidance for your financial needs, ensuring you make the best choices for your future.</p>
+        </section>
+    </div>
+</body>
+</html>
